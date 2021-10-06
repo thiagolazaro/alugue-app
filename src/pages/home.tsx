@@ -7,8 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import New from '../components/New';
 
 export default function Home() {
-  const navigation = useNavigation();
-
+  const navigate = useNavigation();
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -36,7 +35,7 @@ export default function Home() {
           cover={require('../assets/house1.jpg')}
           name="Casa de Praia"
           description="Casa nova uma quadra do mar,lugar seguro e monitorado 24horas. "
-          onPress={() => navigation.navigate('Detail')}
+          onPress={() => navigate.navigate('Detail')}
         />
         <New
           cover={require('../assets/house2.jpg')}
